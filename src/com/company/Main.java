@@ -1,7 +1,6 @@
 package com.company;
 
-import java.util.ArrayList;
-import java.util.Iterator;
+import java.util.*;
 
 public class Main {
 
@@ -16,12 +15,11 @@ public class Main {
         al.add("F");
 
         System.out.print("OG contents of list: ");
-        Iterator itr = al.iterator();
-        while(itr.hasNext())
+        ListIterator itr = al.listIterator(al.size());
+        while(itr.hasPrevious())
         {
-            Object element = itr.next();
-            if(element.equals("C"))
-                System.out.print(element + " ");
+            Object element = itr.previous();
+            System.out.print(element + " ");
         }
     }
 }
